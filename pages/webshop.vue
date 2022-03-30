@@ -1,5 +1,8 @@
 <template>
   <div>
+    <head>
+      <title></title>
+    </head>
     <div id="my-store-71815548"></div>
     <div>
       <script

@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   background: rgb(223, 183, 155);
   background: radial-gradient(

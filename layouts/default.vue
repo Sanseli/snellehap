@@ -33,7 +33,10 @@ export default {
     rgba(246, 161, 104, 1) 100%
   );
 }
+</style>
+
+<style>
 html {
-  overflow-y: auto;
+  overflow-y: auto !important;
 }
 </style>

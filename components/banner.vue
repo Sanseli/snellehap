@@ -1,11 +1,7 @@
 <template>
   <div class="background">
     <div class="banner">
-      <img
-        src="logo/logo.png"
-        alt="logo"
-        style="height: 60vh; width: 60vh; align-self: center"
-      />
+      <img src="logo/logo.svg" alt="logo" class="logo" />
 
       <h1 style="font-family: Bauhaus 93; color: #7f001e" class="text-primary">
         Opent binnenkort!
@@ -13,6 +9,7 @@
       <a href="https://goo.gl/maps/QbnRgaVU8LyE7Vx4A" target="_blank"
         >Markt 5, 3980 Tessenderlo</a
       >
+      <a href="tel:0471 95 1977">0471 95 1977</a>
     </div>
   </div>
 </template>
@@ -21,7 +18,7 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 @import url(//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93);
 .banner {
   width: 100vw;
@@ -31,5 +28,14 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.logo {
+  height: 70vh;
+  align-self: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 70vw;
+    height: auto;
+  }
 }
 </style>

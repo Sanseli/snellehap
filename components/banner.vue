@@ -1,7 +1,7 @@
 <template>
   <div class="background">
     <div class="banner">
-      <img src="logo/logo.svg" alt="logo" class="logo" />
+      <img src="logo/logo.svg" alt="logo" class="logo" viewBox="0 0 100 100" />
 
       <h1 style="font-family: Bauhaus 93; color: #7f001e" class="text-primary">
         Opent binnenkort!
@@ -30,8 +30,9 @@ export default {};
   justify-content: center;
 }
 .logo {
-  height: 70vh;
+  height: 60vh;
   align-self: center;
+  margin-bottom: 1em;
 
   @media only screen and (max-width: 600px) {
     width: 70vw;

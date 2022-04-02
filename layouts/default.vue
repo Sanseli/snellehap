@@ -1,9 +1,15 @@
 <template>
   <v-app>
     <v-app-bar fixed app dense flat color="transparent">
-      <v-spacer />
-      <v-btn text to="/">Home</v-btn>
-      <v-btn text @click="toWebshop()">Webshop</v-btn>
+      <!-- <v-spacer /> -->
+      <v-btn text rounded depressed to="/" class="app-bar-btn">
+        <!-- <v-icon left> mdi-home </v-icon> -->
+        Home
+      </v-btn>
+      <v-btn text rounded depressed class="app-bar-btn" @click="toWebshop()">
+        <!-- <v-icon left> mdi-cart </v-icon> -->
+        Webshop
+      </v-btn>
     </v-app-bar>
 
     <Nuxt />
@@ -35,5 +41,8 @@ export default {
 }
 html {
   overflow-y: auto;
+}
+.app-bar-btn.v-btn--active::before {
+  opacity: 0;
 }
 </style>

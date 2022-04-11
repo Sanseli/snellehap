@@ -4,7 +4,7 @@
       <img src="logo/logo.png" alt="logo" class="logo" />
 
       <h1 style="font-family: Bauhaus 93; color: #7f001e" class="text-primary">
-        Opent binnenkort!
+        <!--  -->
       </h1>
       <a href="https://goo.gl/maps/QbnRgaVU8LyE7Vx4A" target="_blank"
         >Markt 5, 3980 Tessenderlo</a

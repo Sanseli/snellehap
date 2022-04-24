@@ -21,8 +21,7 @@ export default {};
 <style lang="scss">
 @import url(//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93);
 .banner {
-  width: 100vw;
-  position: absolute;
+  width: auto;
   text-align: center;
   height: 100%;
   display: flex;

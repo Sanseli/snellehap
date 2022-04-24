@@ -1,3 +1,6 @@
 <template>
-  <banner />
+  <div>
+    <banner />
+    <menu-card />
+  </div>
 </template>

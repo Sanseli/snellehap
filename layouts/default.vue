@@ -35,8 +35,11 @@ export default {
     rgba(246, 161, 104, 1) 100%
   );
 }
+</style>
+
+<style>
 html {
-  overflow-y: auto;
+  overflow-y: auto !important;
 }
 .app-bar-btn.v-btn--active::before {
   opacity: 0;

@@ -1,10 +1,10 @@
 <template>
   <div class="background">
     <div class="banner">
-      <img src="logo/logo.svg" alt="logo" class="logo" />
+      <img src="logo/logo.png" alt="logo" class="logo" />
 
       <h1 style="font-family: Bauhaus 93; color: #7f001e" class="text-primary">
-        Opent binnenkort!
+        <!--  -->
       </h1>
       <a href="https://goo.gl/maps/QbnRgaVU8LyE7Vx4A" target="_blank"
         >Markt 5, 3980 Tessenderlo</a
@@ -30,8 +30,9 @@ export default {};
   justify-content: center;
 }
 .logo {
-  height: 70vh;
+  height: 59vh;
   align-self: center;
+  margin-bottom: 1.2em;
 
   @media only screen and (max-width: 600px) {
     width: 70vw;

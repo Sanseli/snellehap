@@ -6,10 +6,6 @@
         <!-- <v-icon left> mdi-home </v-icon> -->
         Home
       </v-btn>
-      <v-btn text rounded depressed class="app-bar-btn" @click="toWebshop()">
-        <!-- <v-icon left> mdi-cart </v-icon> -->
-        Webshop
-      </v-btn>
     </v-app-bar>
 
     <Nuxt />

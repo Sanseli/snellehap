@@ -1,6 +1,6 @@
 <template>
   <div>
     <banner />
-    <menu-card />
+    <!-- <menu-card /> -->
   </div>
 </template>

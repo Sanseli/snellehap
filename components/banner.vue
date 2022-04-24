@@ -23,7 +23,7 @@ export default {};
 .banner {
   width: auto;
   text-align: center;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

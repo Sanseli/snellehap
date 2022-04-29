@@ -1,8 +1,9 @@
 <template>
   <div class="bg">
+    <h1 style="text-align: center">MENU</h1>
     <div v-for="menuItem in menu" :key="menuItem.name">
       <h2>{{ menuItem.title }}</h2>
-      <menu-card-items :menuItem="menuItem" />
+      <menu-card-items :menuItem="menuItem" @ready="loading = false" />
     </div>
   </div>
 </template>
@@ -13,6 +14,7 @@ export default {
   components: { menuCardItems },
   data() {
     return {
+      loading: true,
       menu: [
         {
           title: "Verse Burgers",
@@ -113,6 +115,11 @@ export default {
             { name: "Thee", image: undefined },
           ],
         },
+        {
+          title: "Overig",
+          slug: "overig",
+          items: [{ name: "Schepijs", image: "schepijs.png" }],
+        },
       ],
     };
   },
@@ -120,15 +127,23 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
 .bg {
-  background: rgb(226, 226, 226);
+  background: rgb(240, 240, 240);
   background: radial-gradient(
     circle,
-    rgba(226, 226, 226, 1) 31%,
-    rgba(213, 213, 213, 1) 65%,
-    rgba(182, 182, 182, 1) 88%,
-    rgba(204, 204, 204, 1) 100%
+    rgba(240, 240, 240, 1) 31%,
+    rgba(230, 230, 230, 1) 65%,
+    rgba(209, 209, 209, 1) 88%,
+    rgba(190, 190, 190, 1) 100%
   );
   padding: 2rem;
+}
+
+h2 {
+  color: rgb(38, 38, 38);
+  font-family: "Rubik", sans-serif !important;
+  padding: 1em;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div>
+<div>
+  <div v-if="isNuxtReady">
     <carousel
-      v-if="isNuxtReady"
       :margin="15"
-      :items="5"
+      :items="columns"
       :stagePadding="10"
       :dots="false"
       :nav="false"
@@ -15,10 +15,9 @@
         :key="item.name"
         class="menuItem"
         width="300"
-        height="300"
-        style=""
+        height="256"
       >
-        <v-img height="80%" :src="`menu/${menuItem.slug}/${item.image}`"></v-img>
+        <v-img style="background:white" height="80%" :src="`menu/${menuItem.slug}/${item.image}`"></v-img>
 
         <v-card-title class="title" style="color: white">{{ item.name }}</v-card-title>
       </v-card>
@@ -33,6 +32,16 @@
         <v-icon>mdi-chevron-right</v-icon>
       </v-btn>
     </div>
+  </div>
+  
+  <div v-else class="skeletonLoaderRow">
+    <div v-for="column in columns" :key="column">
+    <v-skeleton-loader
+      type="card"
+      style="width: 275.04px; height: 300px; margin-right: 15px;"
+    ></v-skeleton-loader>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -58,24 +67,60 @@ export default {
     const vm = this;
     if (process.browser) {
       window.onNuxtReady((app) => {
-        console.log("Nuxt ready!");
         vm.isNuxtReady = true;
       });
     }
   },
+  computed: {
+    columns() {
+      // if (this.$vuetify.breakpoint.xl) {
+      //   return 4;
+      // }
+
+      if (this.$vuetify.breakpoint.lg) {
+        return 5;
+      }
+
+      // if (this.$vuetify.breakpoint.md) {
+      //   return 2;
+      // }
+
+      // if (this.$vuetify.breakpoint.sm) {
+      //   return 2;
+      // }
+
+      return 2;
+    }
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .menuItem {
   background-color: #b86c30 !important; 
 
   .title {
     font-size: 1em !important;
+    
+    
   }
+.v-card__title {
+      padding: 9px !important;
+    }
+  
 }
-
+.v-skeleton-loader__card-heading {
+    background-color: #b86c30 !important;
+  }
+  .v-skeleton-loader__image {
+    background-color: white !important;
+  }
 .spaceBetween > * + * {
   margin-left: 0.5rem;
+}
+
+.skeletonLoaderRow {
+  display: flex !important;
+  padding: 0 10px 0 10px ;
 }
 </style>

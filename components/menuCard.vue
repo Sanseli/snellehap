@@ -1,91 +1,134 @@
 <template>
-  <div>
-    <v-card
-      v-for="burger in burgers"
-      class="mx-auto my-12"
-      width="374"
-      height="auto"
-    >
-      <!-- <template slot="progress">
-        <v-progress-linear
-          color="deep-purple"
-          height="10"
-          indeterminate
-        ></v-progress-linear>
-      </template> -->
-
-      <v-img
-        height="250"
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-      ></v-img>
-
-      <v-card-title>{{ burger.name }}</v-card-title>
-
-      <!-- <v-card-text>
-        <v-row align="center" class="mx-0">
-          <v-rating
-            :value="4.5"
-            color="amber"
-            dense
-            half-increments
-            readonly
-            size="14"
-          ></v-rating>
-
-          <div class="grey--text ms-4">4.5 (413)</div>
-        </v-row>
-
-        <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div>
-
-        <div>
-          Small plates, salads & sandwiches - an intimate setting with 12 indoor
-          seats plus patio seating.
-        </div>
-      </v-card-text>
-
-      <v-divider class="mx-4"></v-divider>
-
-      <v-card-title>Tonight's availability</v-card-title>
-
-      <v-card-text>
-        <v-chip-group
-          v-model="selection"
-          active-class="deep-purple accent-4 white--text"
-          column
-        >
-          <v-chip>5:30PM</v-chip>
-
-          <v-chip>7:30PM</v-chip>
-
-          <v-chip>8:00PM</v-chip>
-
-          <v-chip>9:00PM</v-chip>
-        </v-chip-group>
-      </v-card-text>
-
-      <v-card-actions>
-        <v-btn color="deep-purple lighten-2" text @click="reserve">
-          Reserve
-        </v-btn>
-      </v-card-actions> -->
-    </v-card>
+  <div class="bg">
+    <div v-for="menuItem in menu" :key="menuItem.name">
+      <h2>{{ menuItem.title }}</h2>
+      <menu-card-items :menuItem="menuItem" />
+    </div>
   </div>
 </template>
 
 <script>
+import menuCardItems from "./menuCardItems.vue";
 export default {
+  components: { menuCardItems },
   data() {
     return {
-      burgers: [
-        { name: "Hamburger", image: "" },
-        { name: "Cheeseburger", image: "" },
-        { name: "Hamburger Snelle Hap", image: "" },
-        { name: "Hamburger Snelle Hap Dubbelop", image: "" },
-        { name: "Kip Burger", image: "" },
-        { name: "Kip Burger Snelle Hap", image: "" },
-        { name: "Kip Burger Snelle Hap Dubbelop", image: "" },
+      menu: [
+        {
+          title: "Verse Burgers",
+          slug: "burgers",
+          items: [
+            { name: "Hamburger", image: undefined },
+            { name: "Cheeseburger", image: undefined },
+            { name: "Hamburger Snelle Hap", image: undefined },
+            {
+              name: "Hamburger Snelle Hap Dubbelop",
+              image: "snelleHapDubbelop.jpg",
+            },
+            { name: "Kip Burger", image: undefined },
+            { name: "Kip Burger Snelle Hap", image: undefined },
+            {
+              name: "Kip Burger Snelle Hap Dubbelop",
+              image: "kipburgerSnelleHapDubbelop.jpg",
+            },
+          ],
+        },
+        {
+          title: "Warme Broodjes",
+          slug: "broodjesWarm",
+          items: [
+            { name: "Broodje Spiegelei met Spek", image: undefined },
+            { name: "Broodje Boulet", image: undefined },
+            { name: "Broodje Warm Vlees", image: undefined },
+            { name: "Broodje Kip Cocktail", image: "kipCocktail.jpg" },
+            { name: "Broodje Kip Cajun Andalouse", image: undefined },
+            {
+              name: "Broodje Pikante Kip Samurai",
+              image: "pikanteKipSamurai.jpg",
+            },
+          ],
+        },
+        {
+          title: "Bladerdeeg Snacks",
+          slug: "snacks",
+          items: [
+            { name: "Worstenbroodje", image: undefined },
+            { name: "Worstenbroodje Speciaal", image: undefined },
+          ],
+        },
+        {
+          title: "Panini's en Wraps",
+          slug: "paninisWraps",
+          items: [
+            { name: "Panini Kaas Tomaat", image: undefined },
+            { name: "Panini Kaas Hesp", image: "kaasHesp.jpg" },
+            { name: "Panini Caprese", image: undefined },
+            { name: "Panini Boulet", image: undefined },
+            { name: "Panini Kip", image: undefined },
+            { name: "Panini Kip Cajun Andalouse", image: undefined },
+            { name: "Panini Kip Pikant Samurai", image: undefined },
+            { name: "Wrap Tonijn", image: undefined },
+            { name: "Wrap Zalm", image: undefined },
+            { name: "Wrap Kip Cocktail", image: undefined },
+          ],
+        },
+        {
+          title: "Koude Broodjes",
+          slug: "broodjesKoud",
+          items: [
+            { name: "Broodje Rauwkost", image: undefined },
+            { name: "Broodje Gezond", image: "gezond.jpg" },
+            { name: "Broodje Kip Gezond", image: undefined },
+            { name: "Broodje Prepare met Ajuin", image: undefined },
+            { name: "Broodje Martino", image: undefined },
+            { name: "Broodje Martino Speciaal", image: undefined },
+            { name: "Broodje Tonijn", image: undefined },
+            { name: "Broodje Zalm", image: undefined },
+          ],
+        },
+        {
+          title: "Frisdrank",
+          slug: "frisdrank",
+          items: [
+            { name: "Cola / Cola zero 0,5L", image: undefined },
+            { name: "Fanta 0,5L", image: undefined },
+            { name: "Sprite 0,5L", image: undefined },
+            { name: "Lipton Ice Tea sparkling 0,5L", image: undefined },
+            { name: "Spa Blauw / Spa Rood 0,5L", image: undefined },
+            { name: "AA Drink 0,5L", image: undefined },
+            { name: "Slammers Energie", image: undefined },
+            { name: "Verse Sinaasappelsap 0,33L", image: undefined },
+          ],
+        },
+        {
+          title: "Warme Dranken",
+          slug: "drankenWarm",
+          items: [
+            { name: "Koffie Klassiek", image: undefined },
+            { name: "Espresso", image: undefined },
+            { name: "Cappuccino", image: undefined },
+            { name: "Koffie Verkeerd", image: undefined },
+            { name: "Latte Machiato", image: undefined },
+            { name: "Koffie met Smaak", image: undefined },
+            { name: "Thee", image: undefined },
+          ],
+        },
       ],
     };
   },
 };
 </script>
+
+<style scoped>
+.bg {
+  background: rgb(226, 226, 226);
+  background: radial-gradient(
+    circle,
+    rgba(226, 226, 226, 1) 31%,
+    rgba(213, 213, 213, 1) 65%,
+    rgba(182, 182, 182, 1) 88%,
+    rgba(204, 204, 204, 1) 100%
+  );
+  padding: 2rem;
+}
+</style>

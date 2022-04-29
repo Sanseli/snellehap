@@ -27,6 +27,15 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: rgb(223, 183, 155);
+  background: radial-gradient(
+    circle,
+    rgba(223, 183, 155, 1) 29%,
+    rgba(233, 175, 138, 1) 57%,
+    rgba(233, 174, 134, 1) 65%,
+    rgba(242, 165, 111, 1) 88%,
+    rgba(246, 161, 104, 1) 100%
+  );
 }
 .logo {
   height: 59vh;

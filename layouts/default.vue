@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped>
-#app {
+/* #app {
   background: rgb(223, 183, 155);
   background: radial-gradient(
     circle,
@@ -34,7 +34,7 @@ export default {
     rgba(242, 165, 111, 1) 88%,
     rgba(246, 161, 104, 1) 100%
   );
-}
+} */
 </style>
 
 <style>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <banner />
-    <!-- <menu-card /> -->
+    <menu-card />
+    <!-- <carousel-test /> -->
   </div>
 </template>

@@ -2,6 +2,7 @@
   <div>
     <banner />
     <menu-card />
-    <!-- <carousel-test /> -->
+    <contact />
+    <footer-element />
   </div>
 </template>

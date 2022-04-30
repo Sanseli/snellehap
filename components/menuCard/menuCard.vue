@@ -1,5 +1,5 @@
 <template>
-  <div class="bg">
+  <div id="menuCard">
     <h1 style="text-align: center">MENU</h1>
     <div v-for="menuItem in menu" :key="menuItem.name">
       <h2>{{ menuItem.title }}</h2>
@@ -129,7 +129,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
-.bg {
+#menuCard {
   background: rgb(240, 240, 240);
   background: radial-gradient(
     circle,
@@ -138,7 +138,7 @@ export default {
     rgba(209, 209, 209, 1) 88%,
     rgba(190, 190, 190, 1) 100%
   );
-  padding: 2rem;
+  padding: 5rem 2rem 2rem 2rem;
 }
 
 h2 {

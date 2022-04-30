@@ -1,10 +1,32 @@
 <template>
   <v-app>
-    <v-app-bar fixed app dense flat color="transparent">
-      <!-- <v-spacer /> -->
-      <v-btn text rounded depressed to="/" class="app-bar-btn">
-        <!-- <v-icon left> mdi-home </v-icon> -->
+    <v-app-bar fixed app color="transparent" elevate-on-scroll>
+      <v-btn
+        text
+        rounded
+        depressed
+        @click="scrollTo('banner')"
+        class="app-bar-btn"
+      >
         Home
+      </v-btn>
+      <v-btn
+        text
+        rounded
+        depressed
+        @click="scrollTo('menuCard')"
+        class="app-bar-btn"
+      >
+        Menu
+      </v-btn>
+      <v-btn
+        text
+        rounded
+        depressed
+        @click="scrollTo('contact')"
+        class="app-bar-btn"
+      >
+        Contact
       </v-btn>
     </v-app-bar>
 
@@ -19,25 +41,35 @@ export default {
       let routeData = this.$router.resolve({ name: "webshop", query: {} });
       window.open(routeData.href, "_self");
     },
+
+    scrollTo(className) {
+      var my_element = document.getElementById(className);
+
+      if (my_element) {
+        my_element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }
+    },
   },
 };
 </script>
 
-<style scoped>
-/* #app {
-  background: rgb(223, 183, 155);
-  background: radial-gradient(
-    circle,
-    rgba(223, 183, 155, 1) 29%,
-    rgba(233, 175, 138, 1) 57%,
-    rgba(233, 174, 134, 1) 65%,
-    rgba(242, 165, 111, 1) 88%,
-    rgba(246, 161, 104, 1) 100%
-  );
-} */
-</style>
+<style lang="scss" scoped>
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 260px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
 
-<style>
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+}
+
 html {
   overflow-y: auto !important;
 }

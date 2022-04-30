@@ -8,7 +8,7 @@
       :dots="false"
       :nav="false"
       :slideValue="slideController"
-      :lazyload="true"
+      :lazyLoad="true"
     >
       <v-card
         v-for="item in menuItem.items"

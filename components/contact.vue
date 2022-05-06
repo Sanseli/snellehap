@@ -21,7 +21,7 @@
 
                     <div
                         v-for="(item, index) in openingHours"
-                        :key="item.day"
+                        :key="item.hours"
                         :style="{ 'grid-column': 2, 'grid-row': index + 1 }"
                     >
                         {{ item.hours }}
@@ -36,7 +36,7 @@
             </div>
 
             <div>
-                <h2><v-icon>mdi-phone</v-icon> Bezoek ons</h2>
+                <h2><v-icon>mdi-map-marker-outline</v-icon> Bezoek ons</h2>
 
                 <a href="https://goo.gl/maps/QbnRgaVU8LyE7Vx4A" target="_blank">
                     TakeAway De Snelle Hap <br />

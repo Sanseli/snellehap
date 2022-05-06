@@ -21,18 +21,20 @@
                 >
                     <v-img
                         id="cardImg"
-                        height="80%"
+                        height="78%"
                         :src="`menu/${menuItem.slug}/${item.image}`"
                     ></v-img>
 
-                    <v-card-title class="title" style="color: white">{{
-                        item.name
-                    }}</v-card-title>
+                    <v-chip id="cardChip" v-if="item.price">
+                        €{{ item.price.toFixed(2).replace(".", ",") }}
+                    </v-chip>
+
+                    <v-card-title class="title">{{ item.name }}</v-card-title>
                 </v-card>
             </carousel>
         </div>
 
-        <div v-else class="skeletonLoaderRow">
+        <!-- <div v-else class="skeletonLoaderRow">
             <div v-for="column in 10" :key="column">
                 <v-skeleton-loader
                     class="skeletonLoaderCard"
@@ -40,7 +42,7 @@
                     :style="{ height: cardSize + 'px', width: cardSize + 'px' }"
                 ></v-skeleton-loader>
             </div>
-        </div>
+        </div> -->
 
         <div class="carouselButtons">
             <v-btn class="ma-2" text icon @click="slideController--">
@@ -79,15 +81,15 @@ export default {
         const vm = this;
         if (process.browser) {
             window.onNuxtReady((app) => {
-                vm.isNuxtReady = true;
+                this.isNuxtReady = true;
             });
         }
     },
 
     computed: {
         cardSize() {
-            if (this.$vuetify.breakpoint.sm) {
-                return 140;
+            if (process.browser && window.innerWidth < 600) {
+                return 150;
             }
 
             return 256;
@@ -101,14 +103,49 @@ export default {
     background-color: $color-orange !important;
 
     .title {
-        font-size: 1em !important;
+        white-space: initial;
+        word-break: break-word;
+        line-height: 1em;
+
+        @media screen and (min-width: 800px) {
+            font-size: 1em !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 0.85em !important;
+        }
     }
     .v-card__title {
-        padding: 9px !important;
+        align-content: center;
+
+        @media screen and (min-width: 800px) {
+            height: 3.6em;
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            height: 2.5em;
+            padding-left: 0.5em !important;
+            padding-right: 0.5em !important;
+        }
     }
 
     #cardImg {
-        background-color: $color-white;
+        background-color: white;
+    }
+
+    #cardChip {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        margin: 5px;
+        background-color: $color-orange;
+        color: $color-white;
+    }
+
+    .title {
+        color: $color-white;
     }
 }
 
@@ -118,10 +155,6 @@ export default {
 
 .v-skeleton-loader__image {
     background-color: white !important;
-}
-
-.spaceBetween > * + * {
-    margin-left: 0.5rem;
 }
 
 .skeletonLoaderRow {
@@ -137,5 +170,11 @@ export default {
 
 .carouselButtons {
     text-align: center;
+}
+</style>
+
+<style scoped>
+.spaceBetween > * + * {
+    margin-left: 0.5rem;
 }
 </style>

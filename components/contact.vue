@@ -43,19 +43,16 @@
                     Markt 5 <br />
                     3980 Tessenderlo
                 </a>
-
-                <br />
-
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.227821509602!2d5.0858278157538495!3d51.0673443795653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1392d82bb3705%3A0x2cd03ac95764df59!2sDe%20Snelle%20Hap!5e0!3m2!1sen!2sbe!4v1651273454250!5m2!1sen!2sbe"
-                    width="100"
-                    height="100"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
             </div>
+            <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.227821509602!2d5.0858278157538495!3d51.0673443795653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1392d82bb3705%3A0x2cd03ac95764df59!2sDe%20Snelle%20Hap!5e0!3m2!1sen!2sbe!4v1651273454250!5m2!1sen!2sbe"
+                width="auto"
+                height="auto"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
         </div>
     </div>
 </template>
@@ -105,7 +102,13 @@ export default {
         }
 
         h2 {
-            margin-bottom: 1.5rem;
+            @media screen and (min-width: 800px) {
+                margin-bottom: 1.5rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                margin-bottom: 0.5rem;
+            }
         }
 
         .openingHours {
@@ -114,7 +117,21 @@ export default {
     }
 
     .spaceBetween > * + * {
-        margin-left: 10rem;
+        @media screen and (min-width: 800px) {
+            margin-left: 10rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            margin-top: 2rem;
+        }
+    }
+
+    #map {
+        border: 0;
+
+        @media only screen and (max-width: 600px) {
+            visibility: hidden;
+        }
     }
 }
 </style>

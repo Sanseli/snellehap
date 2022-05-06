@@ -25,18 +25,33 @@ export default {
                     title: "Verse Burgers",
                     slug: "burgers",
                     items: [
-                        { name: "Hamburger", image: undefined },
-                        { name: "Cheeseburger", image: undefined },
-                        { name: "Hamburger Snelle Hap", image: undefined },
+                        { name: "Hamburger", image: undefined, price: 6 },
+                        { name: "Cheeseburger", image: undefined, price: 6.5 },
+                        {
+                            name: "Hamburger Snelle Hap",
+                            image: undefined,
+                            price: 7.5,
+                        },
                         {
                             name: "Hamburger Snelle Hap Dubbelop",
                             image: "snelleHapDubbelop.jpg",
+                            price: 9,
                         },
-                        { name: "Kip Burger", image: undefined },
-                        { name: "Kip Burger Snelle Hap", image: undefined },
+                        { name: "Kip Burger", image: undefined, price: 6 },
+                        {
+                            name: "Kip Cheeseburger",
+                            image: undefined,
+                            price: 6.5,
+                        },
+                        {
+                            name: "Kip Burger Snelle Hap",
+                            image: undefined,
+                            price: 7.5,
+                        },
                         {
                             name: "Kip Burger Snelle Hap Dubbelop",
                             image: "kipburgerSnelleHapDubbelop.jpg",
+                            price: 9,
                         },
                     ],
                 },
@@ -47,20 +62,32 @@ export default {
                         {
                             name: "Broodje Spiegelei met Spek",
                             image: undefined,
+                            price: 4.25,
                         },
-                        { name: "Broodje Boulet", image: undefined },
-                        { name: "Broodje Warm Vlees", image: undefined },
+                        {
+                            name: "Broodje Boulet",
+                            image: undefined,
+                            price: 5.95,
+                        },
+                        {
+                            name: "Broodje Warm Vlees",
+                            image: undefined,
+                            price: 6.5,
+                        },
                         {
                             name: "Broodje Kip Cocktail",
                             image: "kipCocktail.jpg",
+                            price: 6.95,
                         },
                         {
                             name: "Broodje Kip Cajun Andalouse",
                             image: undefined,
+                            price: 6.95,
                         },
                         {
                             name: "Broodje Pikante Kip Samurai",
                             image: "pikanteKipSamurai.jpg",
+                            price: 6.95,
                         },
                     ],
                 },
@@ -68,60 +95,139 @@ export default {
                     title: "Bladerdeeg Snacks",
                     slug: "snacks",
                     items: [
-                        { name: "Worstenbroodje", image: undefined },
-                        { name: "Worstenbroodje Speciaal", image: undefined },
+                        {
+                            name: "Worstenbroodje",
+                            image: "worstenbroodje.png",
+                            price: 2.3,
+                        },
+                        {
+                            name: "Worstenbroodje Speciaal",
+                            image: undefined,
+                            price: 2.5,
+                        },
                     ],
                 },
                 {
                     title: "Panini's en Wraps",
                     slug: "paninisWraps",
                     items: [
-                        { name: "Panini Kaas Tomaat", image: undefined },
-                        { name: "Panini Kaas Hesp", image: "kaasHesp.jpg" },
-                        { name: "Panini Caprese", image: undefined },
-                        { name: "Panini Boulet", image: undefined },
-                        { name: "Panini Kip", image: undefined },
+                        {
+                            name: "Panini Kaas Tomaat",
+                            image: undefined,
+                            price: 3.75,
+                        },
+                        {
+                            name: "Panini Kaas Hesp",
+                            image: "kaasHesp.jpg",
+                            price: 3.75,
+                        },
+                        {
+                            name: "Panini Caprese",
+                            image: undefined,
+                            price: 4.2,
+                        },
+                        { name: "Panini Boulet", image: undefined, price: 4.2 },
+                        { name: "Panini Kip", image: undefined, price: 4.5 },
                         {
                             name: "Panini Kip Cajun Andalouse",
                             image: undefined,
+                            price: 4.5,
                         },
-                        { name: "Panini Kip Pikant Samurai", image: undefined },
-                        { name: "Wrap Tonijn", image: undefined },
-                        { name: "Wrap Zalm", image: undefined },
-                        { name: "Wrap Kip Cocktail", image: undefined },
+                        {
+                            name: "Panini Kip Pikant Samurai",
+                            image: undefined,
+                            price: 4.5,
+                        },
+                        { name: "Wrap Tonijn", image: undefined, price: 4.3 },
+                        { name: "Wrap Zalm", image: undefined, price: 4.9 },
+                        {
+                            name: "Wrap Kip Cocktail",
+                            image: undefined,
+                            price: 4.5,
+                        },
                     ],
                 },
                 {
                     title: "Koude Broodjes",
                     slug: "broodjesKoud",
                     items: [
-                        { name: "Broodje Rauwkost", image: undefined },
-                        { name: "Broodje Gezond", image: "gezond.jpg" },
-                        { name: "Broodje Kip Gezond", image: undefined },
-                        { name: "Broodje Prepare met Ajuin", image: undefined },
-                        { name: "Broodje Martino", image: undefined },
-                        { name: "Broodje Martino Speciaal", image: undefined },
-                        { name: "Broodje Tonijn", image: undefined },
-                        { name: "Broodje Zalm", image: undefined },
+                        {
+                            name: "Broodje Rauwkost",
+                            image: undefined,
+                            price: 3.4,
+                        },
+                        {
+                            name: "Broodje Gezond",
+                            image: "gezond.jpg",
+                            price: 4.85,
+                        },
+                        {
+                            name: "Broodje Kip Gezond",
+                            image: undefined,
+                            price: 5.3,
+                        },
+                        {
+                            name: "Broodje Prepare met Ajuin",
+                            image: undefined,
+                            price: 4.1,
+                        },
+                        {
+                            name: "Broodje Martino",
+                            image: undefined,
+                            price: 4.6,
+                        },
+                        {
+                            name: "Broodje Martino Speciaal",
+                            image: undefined,
+                            price: 5,
+                        },
+                        {
+                            name: "Broodje Tonijn",
+                            image: undefined,
+                            price: 4.95,
+                        },
+                        { name: "Broodje Zalm", image: undefined, price: 6.35 },
                     ],
                 },
                 {
                     title: "Frisdrank",
                     slug: "frisdrank",
                     items: [
-                        { name: "Cola / Cola zero 0,5L", image: undefined },
-                        { name: "Fanta 0,5L", image: undefined },
-                        { name: "Sprite 0,5L", image: undefined },
+                        {
+                            name: "Cola / Cola zero 0,5L",
+                            image: "cola.png",
+                            price: 2.25,
+                        },
+                        { name: "Fanta 0,5L", image: "fanta.png", price: 2.25 },
+                        {
+                            name: "Sprite 0,5L",
+                            image: "sprite.png",
+                            price: 2.25,
+                        },
                         {
                             name: "Lipton Ice Tea sparkling 0,5L",
-                            image: undefined,
+                            image: "icetea.png",
+                            price: 2.25,
                         },
-                        { name: "Spa Blauw / Spa Rood 0,5L", image: undefined },
-                        { name: "AA Drink 0,5L", image: undefined },
-                        { name: "Slammers Energie", image: undefined },
                         {
-                            name: "Verse Sinaasappelsap 0,33L",
-                            image: undefined,
+                            name: "Spa Blauw / Spa Rood 0,5L",
+                            image: "spa.svg",
+                            price: 2,
+                        },
+                        {
+                            name: "AA Drink 0,5L",
+                            image: "aadrink.png",
+                            price: 2.5,
+                        },
+                        {
+                            name: "Slammers Energie",
+                            image: "slammers.png",
+                            price: 1.8,
+                        },
+                        {
+                            name: "Verse Sinaasappelsap",
+                            image: "orangejuice.png",
+                            price: 2.9,
                         },
                     ],
                 },
@@ -129,13 +235,29 @@ export default {
                     title: "Warme Dranken",
                     slug: "drankenWarm",
                     items: [
-                        { name: "Koffie Klassiek", image: undefined },
-                        { name: "Espresso", image: undefined },
-                        { name: "Cappuccino", image: undefined },
-                        { name: "Koffie Verkeerd", image: undefined },
-                        { name: "Latte Machiato", image: undefined },
-                        { name: "Koffie met Smaak", image: undefined },
-                        { name: "Thee", image: undefined },
+                        {
+                            name: "Koffie Klassiek",
+                            image: undefined,
+                            price: 2.8,
+                        },
+                        { name: "Espresso", image: undefined, price: 2.8 },
+                        { name: "Cappuccino", image: undefined, price: 3.2 },
+                        {
+                            name: "Koffie Verkeerd",
+                            image: undefined,
+                            price: 3.2,
+                        },
+                        {
+                            name: "Latte Machiato",
+                            image: undefined,
+                            price: 3.2,
+                        },
+                        {
+                            name: "Koffie met Smaak",
+                            image: undefined,
+                            price: 0.5,
+                        },
+                        { name: "Thee", image: undefined, price: 2.5 },
                     ],
                 },
                 {
@@ -163,6 +285,10 @@ export default {
 
     h2 {
         padding: 1em;
+
+        @media only screen and (max-width: 600px) {
+            text-align: center;
+        }
     }
 }
 </style>

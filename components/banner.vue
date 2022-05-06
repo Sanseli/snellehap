@@ -59,6 +59,7 @@ export default {
         color: white;
         width: fit-content;
         align-self: center;
+        margin-top: 2em;
     }
 }
 </style>

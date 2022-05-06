@@ -20,10 +20,15 @@
                     :height="cardSize"
                 >
                     <v-img
-                        id="cardImg"
+                        v-if="item.image"
+                        class="cardImg"
                         height="78%"
                         :src="`menu/${menuItem.slug}/${item.image}`"
+                        :alt="
+                            item.name.toLowerCase().replace(' ', '-') + '-image'
+                        "
                     ></v-img>
+                    <div v-else class="cardImg"></div>
 
                     <v-chip id="cardChip" v-if="item.price">
                         €{{ item.price.toFixed(2).replace(".", ",") }}
@@ -131,8 +136,9 @@ export default {
         }
     }
 
-    #cardImg {
+    .cardImg {
         background-color: white;
+        height: 78%;
     }
 
     #cardChip {

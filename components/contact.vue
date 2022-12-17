@@ -62,12 +62,12 @@ export default {
     data() {
         return {
             openingHours: [
-                { day: "Maandag", hours: "10 - 18" },
-                { day: "Dinsdag", hours: "10 - 18" },
-                { day: "Woensdag", hours: "10 - 18" },
-                { day: "Donderdag", hours: "10 - 18" },
-                { day: "Vrijdag", hours: "10 - 18" },
-                { day: "Zaterdag", hours: "10 - 18" },
+                { day: "Maandag", hours: "8 - 16" },
+                { day: "Dinsdag", hours: "8 - 16" },
+                { day: "Woensdag", hours: "8 - 14" },
+                { day: "Donderdag", hours: "8 - 16" },
+                { day: "Vrijdag", hours: "8 - 16" },
+                { day: "Zaterdag", hours: "8 - 14" },
                 { day: "Zondag en Feestdagen", hours: "Gesloten" },
             ],
         };

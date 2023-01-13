@@ -2,11 +2,28 @@
     <div id="menuCard">
         <h1>MENU</h1>
 
-        <div v-for="menuItem in menu" :key="menuItem.name">
+        <!-- <div v-for="menuItem in menu" :key="menuItem.name">
             <h2>{{ menuItem.title }}</h2>
 
             <menu-card-items :menuItem="menuItem" @ready="loading = false" />
-        </div>
+        </div> -->
+
+        <img    
+            src="~/static/menu/menu_broodjes_koud.jpg"
+            class="menuCardImage"
+        />
+        <img    
+            src="~/static/menu/menu_broodjes_warm.jpg"
+            class="menuCardImage"
+        />
+        <img    
+            src="~/static/menu/menu_hamburger.jpg"
+            class="menuCardImage"
+        />
+        <img    
+            src="~/static/menu/menu_panini.jpg"
+            class="menuCardImage"
+        />
     </div>
 </template>
 
@@ -273,15 +290,7 @@ export default {
 
 <style lang="scss" scoped>
 #menuCard {
-    background: rgb(240, 240, 240);
-    background: radial-gradient(
-        circle,
-        rgba(240, 240, 240, 1) 31%,
-        rgba(230, 230, 230, 1) 65%,
-        rgba(209, 209, 209, 1) 88%,
-        rgba(190, 190, 190, 1) 100%
-    );
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 0 2rem;
 
     h2 {
         padding: 1em;
@@ -290,5 +299,18 @@ export default {
             text-align: center;
         }
     }
+
+    text-align: center;
+}
+
+.menuCardImage {
+    width: 100%;
+    margin-top: 1.5rem;
+    @media only screen and (min-width: 768px) {
+        max-width: 45rem;
+        margin: 3rem 1.5rem 0 1.5rem;
+    }
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>

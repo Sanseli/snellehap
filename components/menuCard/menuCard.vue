@@ -9,19 +9,23 @@
         </div> -->
 
         <img    
-            src="~/static/menu/menu_broodjes_koud.jpg"
+            src="~/static/menu/menu_broodjes.jpg"
             class="menuCardImage"
         />
         <img    
-            src="~/static/menu/menu_broodjes_warm.jpg"
+            src="~/static/menu/menu_specials.jpg"
             class="menuCardImage"
         />
         <img    
-            src="~/static/menu/menu_hamburger.jpg"
+            src="~/static/menu/menu_wrap_panini.jpg"
             class="menuCardImage"
         />
         <img    
-            src="~/static/menu/menu_panini.jpg"
+            src="~/static/menu/menu_ijsbeker.jpg"
+            class="menuCardImage"
+        />
+        <img    
+            src="~/static/menu/menu_kinderijsbeker.jpg"
             class="menuCardImage"
         />
     </div>

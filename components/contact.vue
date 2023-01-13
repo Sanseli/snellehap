@@ -42,6 +42,7 @@
                     TakeAway De Snelle Hap <br />
                     Markt 5 <br />
                     3980 Tessenderlo
+                    België
                 </a>
             </div>
             <iframe

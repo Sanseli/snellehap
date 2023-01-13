@@ -1,7 +1,10 @@
 <template>
     <div>
         <banner />
-        <menu-card />
+        <div id="content">
+            <about/>
+            <menu-card />
+        </div>
         <contact />
         <footer-element />
         <v-btn id="jumpToTopBtn" elevation="2" fab @click="scrollTo('banner')"
@@ -19,6 +22,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#content {
+    background: rgb(240, 240, 240);
+    background: radial-gradient(
+        circle,
+        rgba(240, 240, 240, 1) 31%,
+        rgba(230, 230, 230, 1) 65%,
+        rgba(209, 209, 209, 1) 88%,
+        rgba(190, 190, 190, 1) 100%
+    );
+
+    padding: 5rem 0 5rem 0;
+    @media only screen and (min-width: 768px) {
+        padding: 10rem 0 10rem 0
+    }
+}
+
 #jumpToTopBtn {
     position: fixed;
     bottom: 0;

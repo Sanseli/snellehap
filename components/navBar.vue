@@ -1,5 +1,6 @@
 <template>
-  <v-app-bar fixed app color="transparent" elevate-on-scroll>
+  <v-app-bar fixed app color="rgba(246, 161, 104, 1)" elevate-on-scroll>
+
     <v-btn
       text
       rounded
@@ -42,3 +43,12 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.v-app-bar.v-app-bar.v-app-bar--hide-shadow {
+  background-color: transparent !important;
+  .v-image__image .v-image__image--cover {
+    background-image: unset !important;
+  }
+}
+</style>

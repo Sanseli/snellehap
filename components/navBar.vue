@@ -14,6 +14,15 @@
       text
       rounded
       depressed
+      @click="scrollTo('about')"
+      class="app-bar-btn"
+    >
+      Over ons
+    </v-btn>
+    <v-btn
+      text
+      rounded
+      depressed
       @click="scrollTo('menuCard')"
       class="app-bar-btn"
     >

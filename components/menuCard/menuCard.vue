@@ -21,6 +21,10 @@
             class="menuCardImage"
         />
         <img    
+            src="~/static/menu/menu_friet.jpg"
+            class="menuCardImage"
+        />
+        <img    
             src="~/static/menu/menu_ijsbeker.jpg"
             class="menuCardImage"
         />

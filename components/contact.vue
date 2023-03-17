@@ -63,13 +63,13 @@ export default {
     data() {
         return {
             openingHours: [
-                { day: "Maandag", hours: "8 - 16" },
-                { day: "Dinsdag", hours: "8 - 16" },
-                { day: "Woensdag", hours: "8 - 14" },
-                { day: "Donderdag", hours: "8 - 16" },
-                { day: "Vrijdag", hours: "8 - 16" },
-                { day: "Zaterdag", hours: "8 - 14" },
-                { day: "Zondag en Feestdagen", hours: "Gesloten" },
+                { day: "Maandag", hours: "10:30-14:00" },
+                { day: "Dinsdag", hours: "10:30-14:00" },
+                { day: "Woensdag", hours: "10:30-14:00   16:00-19:00" },
+                { day: "Donderdag", hours: "10:30-14:00   15:30-19:00" },
+                { day: "Vrijdag", hours: "10:30-14:00   15:30-19:30" },
+                { day: "Zaterdag", hours: "11:00-14:30   16:00-19:30" },
+                { day: "Zondag", hours: "11:30 - 14:30   16:00-19:00" },
             ],
         };
     },
